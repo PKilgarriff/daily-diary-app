@@ -11,4 +11,8 @@ class DiaryApp < Sinatra::Base
   get '/' do
     erb :index
   end
+
+  get '/diary-entries' do
+    erb :diary_entries
+  end
 end

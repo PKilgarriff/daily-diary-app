@@ -13,7 +13,7 @@ module DatabaseHelper
     
     defaults = [
       { title: "Tuesday: Hello World!" },
-      { title: "Wednesday: Podcasts I Forgot" },
+      { title: "Wednesday: Podcasts I Like" },
       { title: "Thursday: St Patrick''s Day" }
       # { title: "Thursday: St Patrick''s Day'); DROP TABLE entries;--;" }
     ]

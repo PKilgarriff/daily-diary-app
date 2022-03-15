@@ -22,6 +22,7 @@ bundle install
 ```
 CREATE DATABASE diary_manager;
 CREATE DATABASE diary_manager_test;
+CREATE TABLE entries (id SERIAL PRIMARY KEY, title VARCHAR(60), body VARCHAR(300), time timestamp);
 ```
 
 *To-Do: Once the databases have been test-driven, put the appropriate set-up commands here*
@@ -50,7 +51,7 @@ Once you have followed the steps in [Setting Up](/README.md#setting-up) run the 
   - Postgres gem
   - SimpleCov
   - Rubocop
-- Attempt to configure Travis CI
+- Configure Travis CI
   - needed to explicitly add the linux environment to the Gemfile.lock with `bundle lock --add-platform x86_64-linux`
 - Begin writing Skeleton Readme
 - Write feature test for Homepage
@@ -59,6 +60,16 @@ Once you have followed the steps in [Setting Up](/README.md#setting-up) run the 
 - Set up config.ru and spec_helper to run DiaryApp
 - Refactor to use index.erb view instead of hard-coded string in controller
 - Returned to User Stories now that basic setup is complete, beginning with [Must Haves](/user_stories.md#must-have)
+- Made [class relationship diagram](#basic-model-of-classes-diary-diary-entry) and [example process diagram](#example-process-model-for-listing-diary-entries)
+- Wrote feature test for diary-entries page
+  - passed with minimal implementation
+  - refactor to use database
+- added DatabaseHelper module to assist with:
+  - creation of tables
+  - adding default rows
+- Updated spec_helper to use DatabaseHelper module and setup clean database table before tests
+- Write Unit test for Diary class to list entries from database
+
 
 ## Diagramming
 
