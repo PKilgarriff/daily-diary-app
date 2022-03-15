@@ -10,11 +10,19 @@ SimpleCov.start
 
 ENV['ENVIRONMENT'] = 'test'
 require_relative '../app'
+require_relative './support/database_helper'
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 
 Capybara.app = DiaryApp
+
+RSpec.configure do |config|
+  config.include DatabaseHelper
+  config.before(:each) do
+    setup_test_database
+  end
+end
 
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
