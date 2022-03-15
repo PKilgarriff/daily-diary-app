@@ -62,3 +62,11 @@ Once you have followed the steps in [Setting Up](/README.md#setting-up) run the 
 
 ## Diagramming
 
+### Basic Model of Classes (Diary, Diary Entry)
+
+![Basic Model of Classes (Diary, Diary Entry)](./diagrams/DailyDiary-Classes.png)
+
+### Example Process Model for listing Diary Entries
+
+![Process - List Diary Entries](./diagrams/DailyDiary-Process.png)
+
