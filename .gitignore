@@ -6,3 +6,6 @@
 
 # Locally cached copy of Makers Rubocop Guide
 .rubocop-https*
+
+# Main Diagramming file - not needed as individual views are saved as png
+diagrams/DailyDiary.drawio

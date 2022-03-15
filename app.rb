@@ -9,6 +9,6 @@ class DiaryApp < Sinatra::Base
   # :nocov:
 
   get '/' do
-    'Welcome to the Daily Diary!'
+    erb :index
   end
 end

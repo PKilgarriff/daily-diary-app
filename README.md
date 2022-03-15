@@ -57,3 +57,8 @@ Once you have followed the steps in [Setting Up](/README.md#setting-up) run the 
   - pass with minimal implementation
     - expected string hard-coded in controller
 - Set up config.ru and spec_helper to run DiaryApp
+- Refactor to use index.erb view instead of hard-coded string in controller
+- Returned to User Stories now that basic setup is complete, beginning with [Must Haves](/user_stories.md#must-have)
+
+## Diagramming
+
