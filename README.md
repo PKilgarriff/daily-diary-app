@@ -24,7 +24,7 @@ CREATE DATABASE diary_manager;
 CREATE DATABASE diary_manager_test;
 ```
 
-*To-Do: Once the databases have been test-driven, put the approopriate set-up commands here*
+*To-Do: Once the databases have been test-driven, put the appropriate set-up commands here*
 
 ## Running the Daily Diary App
 
@@ -32,6 +32,7 @@ Once you have followed the steps in [Setting Up](/README.md#setting-up) run the 
 
 1. ```rackup```
 2. Connect to [localhost:9292](http://www.localhost:9292)
+3. Follow the instructions within the interface
 
 ## Testing the Daily Diary App
 
@@ -50,5 +51,9 @@ Once you have followed the steps in [Setting Up](/README.md#setting-up) run the 
   - SimpleCov
   - Rubocop
 - Attempt to configure Travis CI
+  - needed to explicitly add the linux environment to the Gemfile.lock with `bundle lock --add-platform x86_64-linux`
 - Begin writing Skeleton Readme
-
+- Write feature test for Homepage
+  - pass with minimal implementation
+    - expected string hard-coded in controller
+- Set up config.ru and spec_helper to run DiaryApp

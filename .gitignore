@@ -1,1 +1,8 @@
-.rubocop-https---raw-githubusercontent-com-makersacademy-scaffolint-v2-2-0--rubocop-yml
+# Windows temp files?
+/**/.DS_Store
+
+# SimpleCov Output Folder
+/coverage
+
+# Locally cached copy of Makers Rubocop Guide
+.rubocop-https*
