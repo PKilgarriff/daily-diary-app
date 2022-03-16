@@ -74,7 +74,13 @@ Once you have followed the steps in [Setting Up](/README.md#setting-up) run the 
   - adding default rows
 - Updated spec_helper to use DatabaseHelper module and setup clean database table before tests
 - Write Unit test for Diary class to list entries from database
-
+- Update Travis Coniguration to include postgresql service
+  - properly configure test database before running
+- Update Diary class
+  - drive database connections and queries
+  - plan to extract these into a new class
+  - drive creation of #add_entry
+- implement 'Add Title' User Story
 
 
 --------------
