@@ -4,7 +4,7 @@ module DatabaseHelper
   def setup_test_database
     connection = PG.connect(dbname: 'daily_diary_test')
     
-    connection.exec('DROP TABLE entries;')
+    connection.exec('DROP TABLE IF EXISTS entries;')
     connection.exec('CREATE TABLE entries (id SERIAL PRIMARY KEY, title VARCHAR(60), body VARCHAR(300), time timestamp);')
   end
 
