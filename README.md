@@ -20,11 +20,11 @@ bundle install
 2. Run the following SQL commands to create test and production databases:
 
 ```
-CREATE DATABASE diary_manager;
-CREATE DATABASE diary_manager_test;
+CREATE DATABASE daily_diary;
+CREATE DATABASE daily_diary_test;
 ```
 Setup the production database tables with the following SQL command:<br>
-_NB: The testing database tables will be setup by the testing files automatically, there is no need for you to repeat this step for diary_manager_test_
+_NB: The testing database tables will be setup by the testing files automatically, there is no need for you to repeat this step for daily_diary_test_
 
 ```
 CREATE TABLE entries (id SERIAL PRIMARY KEY, title VARCHAR(60), body VARCHAR(300), time timestamp);
