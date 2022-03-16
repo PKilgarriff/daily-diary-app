@@ -17,15 +17,18 @@ bundle install
 ### Database Setup
 
 1. Connect to `psql`<br>
-2. Run the following commands to create test and production databases:
+2. Run the following SQL commands to create test and production databases:
 
 ```
 CREATE DATABASE diary_manager;
 CREATE DATABASE diary_manager_test;
+```
+Setup the production database tables with the following SQL command:<br>
+_NB: The testing database tables will be setup by the testing files automatically, there is no need for you to repeat this step for diary_manager_test_
+
+```
 CREATE TABLE entries (id SERIAL PRIMARY KEY, title VARCHAR(60), body VARCHAR(300), time timestamp);
 ```
-
-*To-Do: Once the databases have been test-driven, put the appropriate set-up commands here*
 
 ## Running the Daily Diary App
 
@@ -42,7 +45,9 @@ Once you have followed the steps in [Setting Up](/README.md#setting-up) run the 
 1. ```rspec```
 2. Browse the output in your terminal
 
-## Approach
+-------
+
+# My Approach to the Challenge
 
 - Set up a repository with technologies that have proven useful for Testing and Development so far:
   - Sinatra
@@ -70,6 +75,11 @@ Once you have followed the steps in [Setting Up](/README.md#setting-up) run the 
 - Updated spec_helper to use DatabaseHelper module and setup clean database table before tests
 - Write Unit test for Diary class to list entries from database
 
+
+
+--------------
+
+# Appendices
 
 ## Diagramming
 
