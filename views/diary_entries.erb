@@ -1,3 +1,8 @@
-<p>Tuesday: Hello World!</p>
-<p>Wednesday: Podcasts I Like</p>
-<p>Thursday: St Patrick\'s Day</p>
+<ul>
+  <% @entries.each do |entry| %>
+    <li><%= entry %></li>
+  <% end %>
+</ul>
+<form action="/" method="get">
+  <input type="submit" value="Return Home">
+</form>
