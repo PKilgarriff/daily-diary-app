@@ -80,7 +80,7 @@ Once you have followed the steps in [Setting Up](/README.md#setting-up) run the 
   - drive database connections and queries
   - plan to extract these into a new class
   - drive creation of #add_entry
-- implement 'Add Title' User Story
+- implement 'Add Title' and 'Add Entry' User Stories through feature test
 
 
 --------------

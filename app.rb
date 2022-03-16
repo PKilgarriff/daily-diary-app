@@ -25,4 +25,13 @@ class DiaryApp < Sinatra::Base
     @entries = @diary.list_all_entries
     erb :diary_entries
   end
+
+  get '/new-entry' do
+    erb :new_entry
+  end
+
+  post '/new-entry' do
+    @diary.add_entry(params)
+    redirect '/'
+  end
 end

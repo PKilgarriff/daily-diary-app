@@ -13,8 +13,10 @@ class Diary
     return output
   end
 
-  def add_entry(title)
-    database_query("INSERT INTO entries title VALUES ('#{title}')")
+  def add_entry(entry_hash)
+    title = entry_hash['title'] || 'Untitled'
+    body = entry_hash['body'] || 'Nothing here, yet...'
+    database_query("INSERT INTO entries (title, body) VALUES ('#{title}','#{body}')")
   end
 
   def database_connection(postgres, database)

@@ -23,8 +23,8 @@ describe Diary do
 
   describe '#add_entry' do
     it 'adds a new diary entry' do
-      sql_query = "INSERT INTO entries title VALUES ('Test Title')"
-      diary.add_entry('Test Title')
+      sql_query = "INSERT INTO entries (title) VALUES ('Test Title')"
+      diary.add_entry({ 'title' => 'Test Title' })
       expect(fake_connection).to have_received(:exec).with(sql_query)
     end
   end
