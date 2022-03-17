@@ -81,6 +81,14 @@ Once you have followed the steps in [Setting Up](/README.md#setting-up) run the 
   - plan to extract these into a new class
   - drive creation of #add_entry
 - implement 'Add Title' and 'Add Entry' User Stories through feature test
+- Added DatabaseManager class
+  - used count-sinatra-psql from Makers course materials as reference
+  - modified self.setup to inject dependency of PG gem
+- Rewrote Diary to use DatabaseManager class
+  - fixed mocking in spec files
+- Add setup file to be included in app.rb that chooses database based on environment
+  - database_connection_setup.rb
+  - added :nocov: tags to production route (untestable)
 
 
 --------------

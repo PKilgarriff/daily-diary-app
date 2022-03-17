@@ -1,6 +1,8 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
 require_relative './lib/diary'
+require_relative './lib/database_manager'
+require_relative './database_connection_setup'
 
 class DiaryApp < Sinatra::Base
   # :nocov:
@@ -10,11 +12,7 @@ class DiaryApp < Sinatra::Base
   # :nocov:
 
   before do
-    if ENV['ENVIRONMENT'] == 'test'
-      @diary = Diary.new(PG, 'daily_diary_test')
-    else
-      @diary = Diary.new(PG, 'daily_diary')
-    end
+    @diary = Diary.new
   end
 
   get '/' do
